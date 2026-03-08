@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "talviron-9cc0f",
     "public": ".",
     "ignore": [
       "firebase.json",
