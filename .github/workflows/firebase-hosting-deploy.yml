@@ -9,24 +9,23 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Install Firebase CLI
-        run: npm install -g firebase-tools
-
-      - name: Validate Firebase token secret
+      - name: Validate Firebase service account secret
         run: |
-          if [ -z "${{ secrets.FIREBASE_TOKEN }}" ]; then
-            echo "Missing FIREBASE_TOKEN secret. Add it in GitHub repo settings under Secrets and variables > Actions."
+          if [ -z "${{ secrets.FIREBASE_SERVICE_ACCOUNT_TALVIRON_9CC0F }}" ]; then
+            echo "Missing FIREBASE_SERVICE_ACCOUNT_TALVIRON_9CC0F secret in GitHub Actions."
             exit 1
           fi
 
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting:talviron-9cc0f --project talviron-9cc0f --token "${{ secrets.FIREBASE_TOKEN }}"
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_TALVIRON_9CC0F }}"
+          channelId: live
+          projectId: talviron-9cc0f
