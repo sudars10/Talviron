@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+
+# Local-only strategy docs (keep off GitHub)
+agents/
+TALVIRON_AGENT_ORCHESTRATION_PLAN.md
+TALVIRON_HEALTH_COACH_PLAN.md
+TALVIRON_MVP_ENGINEERING_PLAN_90_DAYS.md
+TALVIRON_PRD.md
+TALVIRON_SYSTEM_ARCHITECTURE.md

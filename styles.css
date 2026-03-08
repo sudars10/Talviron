@@ -1,0 +1,189 @@
+:root {
+  --bg: #f6f9fb;
+  --ink: #12212f;
+  --muted: #4d6072;
+  --line: #dbe4ea;
+  --brand: #0d8d8f;
+  --brand-dark: #06696b;
+  --card: #ffffffd9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 18%, #c8f1ee 0 18%, transparent 48%),
+    radial-gradient(circle at 90% 84%, #ffe9c7 0 16%, transparent 40%),
+    linear-gradient(165deg, #f7fafc 0%, #eef5f8 100%);
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  filter: blur(38px);
+  border-radius: 999px;
+  opacity: 0.6;
+}
+
+.glow-a {
+  width: 280px;
+  height: 280px;
+  background: #92dfd7;
+  top: -40px;
+  right: -70px;
+}
+
+.glow-b {
+  width: 240px;
+  height: 240px;
+  background: #ffe0a3;
+  bottom: -50px;
+  left: -40px;
+}
+
+.card {
+  width: min(720px, 100%);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 30px;
+  background: var(--card);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 24px 70px #05263f18;
+  position: relative;
+  z-index: 1;
+  animation: rise 550ms ease-out both;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 0.95;
+}
+
+.subtitle {
+  margin: 12px 0 20px;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.pills span {
+  border: 1px solid #cfe0e8;
+  background: #f4fbfd;
+  color: #174356;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.body {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.notify-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input[type="email"] {
+  flex: 1 1 260px;
+  border-radius: 12px;
+  border: 1px solid #c7d7e1;
+  padding: 12px 14px;
+  font: inherit;
+  min-height: 46px;
+}
+
+input[type="email"]:focus {
+  outline: 2px solid #84d5cd;
+  outline-offset: 1px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  background: linear-gradient(180deg, #0e9ea0 0%, #07787a 100%);
+  color: #fff;
+  min-height: 46px;
+  cursor: pointer;
+  transition: transform 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.hint {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  color: #456579;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+}

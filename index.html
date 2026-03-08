@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Talviron | Coming Soon</title>
+    <meta
+      name="description"
+      content="Talviron is building an AI health coach for better cardiometabolic outcomes. Coming soon."
+    />
+    <meta property="og:title" content="Talviron | Coming Soon" />
+    <meta
+      property="og:description"
+      content="A smarter AI health coach is on the way. Join the launch list."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="glow glow-a" aria-hidden="true"></div>
+      <div class="glow glow-b" aria-hidden="true"></div>
+
+      <section class="card">
+        <p class="eyebrow">COMING SOON</p>
+        <h1>Talviron</h1>
+        <p class="subtitle">
+          Your AI health coach for sustainable cardiometabolic improvement.
+        </p>
+
+        <div class="pills">
+          <span>Weight & Lifestyle</span>
+          <span>Prediabetes Support</span>
+          <span>Cholesterol Guidance</span>
+        </div>
+
+        <p class="body">
+          We are building a safety-first coaching experience that helps people
+          build better habits and track outcomes over time.
+        </p>
+
+        <form class="notify-form" id="notifyForm">
+          <label for="email" class="sr-only">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Notify Me</button>
+        </form>
+        <p class="hint" id="formMessage">
+          We will open early access soon.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const form = document.getElementById("notifyForm");
+      const message = document.getElementById("formMessage");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        message.textContent =
+          "Thanks. We saved your interest and will share launch updates soon.";
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
