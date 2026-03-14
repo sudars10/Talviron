@@ -22,11 +22,12 @@ This repository is the home for Talviron product development and delivery.
 Public coming-soon page is live in `index.html`. Core implementation work is being prepared.
 
 ## Publish
-To serve this page from GitHub Pages:
-1. Open repository settings on GitHub.
-2. Go to Pages.
-3. Set source to `Deploy from a branch`.
-4. Select branch `main` and folder `/ (root)`.
+This site is deployed through Firebase Hosting.
+
+Current deployment path:
+1. Push changes to `main`.
+2. GitHub Actions runs the Firebase Hosting deploy workflow.
+3. Firebase serves the updated static site.
 
 ## License
 This project is licensed under the MIT License. See `LICENSE` for details.
