@@ -6,12 +6,12 @@
     <title>Talviron | Coming Soon</title>
     <meta
       name="description"
-      content="Talviron is building an AI health coach for better cardiometabolic outcomes. Coming soon."
+      content="Talviron is building a safety-first cardiometabolic coaching platform for weight, metabolic risk, cholesterol, and medication adherence."
     />
     <meta property="og:title" content="Talviron | Coming Soon" />
     <meta
       property="og:description"
-      content="A smarter AI health coach is on the way. Join the launch list."
+      content="Safety-first daily coaching for cardiometabolic improvement. Web-first launch for members and employer partners."
     />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="./styles.css" />
@@ -25,46 +25,67 @@
         <p class="eyebrow">COMING SOON</p>
         <h1>Talviron</h1>
         <p class="subtitle">
-          Your AI health coach for sustainable cardiometabolic improvement.
+          Daily cardiometabolic coaching built for measurable outcomes.
         </p>
 
         <div class="pills">
-          <span>Weight & Lifestyle</span>
-          <span>Prediabetes Support</span>
-          <span>Cholesterol Guidance</span>
+          <span>Weight & Metabolic Risk</span>
+          <span>Cholesterol & Adherence</span>
+          <span>Safety-First Coaching</span>
         </div>
 
         <p class="body">
-          We are building a safety-first coaching experience that helps people
-          build better habits and track outcomes over time.
+          Talviron is building a focused coaching platform for people working on
+          weight, prediabetes risk, cholesterol improvement, and medication
+          adherence, with clear guardrails and measurable progress tracking.
         </p>
 
-        <form class="notify-form" id="notifyForm">
-          <label for="email" class="sr-only">Email</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Notify Me</button>
-        </form>
-        <p class="hint" id="formMessage">
-          We will open early access soon.
+        <div class="actions">
+          <a class="button button-primary" href="#focus">See What We Are Building</a>
+          <a class="button button-secondary" href="#audiences">Who It Is For</a>
+        </div>
+
+        <p class="hint">
+          Web-first launch. Early pilot access will open after the first member
+          and employer workflows are ready.
         </p>
+
+        <section class="focus" id="focus" aria-label="Product focus">
+          <article class="focus-card">
+            <p class="focus-label">For Members</p>
+            <h2>One clear next step each day.</h2>
+            <p>
+              Daily check-ins, structured coaching, progress tracking, and
+              support for GLP-1 and statin adherence without crossing into
+              diagnosis or treatment.
+            </p>
+          </article>
+
+          <article class="focus-card">
+            <p class="focus-label">For Employers And Health Partners</p>
+            <h2>Engagement and outcomes you can measure.</h2>
+            <p>
+              Cohort reporting, adherence signals, auditability, and escalation
+              workflows built for pilot-readiness and buyer trust.
+            </p>
+          </article>
+        </section>
+
+        <section class="detail-grid" id="audiences" aria-label="Launch details">
+          <div class="detail-card">
+            <p class="detail-kicker">Launch Focus</p>
+            <p>Responsive web first, so we can validate the core coaching loop before adding native apps.</p>
+          </div>
+          <div class="detail-card">
+            <p class="detail-kicker">Core Themes</p>
+            <p>Behavior change, medication adherence, trend visibility, and human escalation when risk appears.</p>
+          </div>
+          <div class="detail-card">
+            <p class="detail-kicker">Positioning</p>
+            <p>Coaching and behavior support with explicit safety boundaries and claim-safe communication.</p>
+          </div>
+        </section>
       </section>
     </main>
-
-    <script>
-      const form = document.getElementById("notifyForm");
-      const message = document.getElementById("formMessage");
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        message.textContent =
-          "Thanks. We saved your interest and will share launch updates soon.";
-        form.reset();
-      });
-    </script>
   </body>
 </html>
